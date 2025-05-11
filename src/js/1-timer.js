@@ -36,7 +36,7 @@ const options = {
     if (selectedDates[0] <= now) {
       iziToast.show({
         backgroundColor: '#ef4040',
-        iconUrl: './img/err.svg',
+        iconUrl: '/img/err.svg',
         title: 'Error',
         message: 'Please choose a date in the future',
       });

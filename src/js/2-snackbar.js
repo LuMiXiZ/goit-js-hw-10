@@ -23,7 +23,7 @@ form.addEventListener('submit', event => {
   if (delayValue < 0) {
     iziToast.show({
       backgroundColor: '#ef4040',
-      iconUrl: './img/err.svg',
+      iconUrl: '/img/err.svg',
       title: 'Error',
       message: 'Invalid value',
     });
@@ -44,7 +44,7 @@ form.addEventListener('submit', event => {
     .then(delayValue => {
       iziToast.show({
         backgroundColor: '#59a10d',
-        iconUrl: './img/ok.svg',
+        iconUrl: '/img/ok.svg',
         title: 'Ok',
         message: `Fulfilled promise in ${delayValue}ms`,
       });
@@ -52,7 +52,7 @@ form.addEventListener('submit', event => {
     .catch(delayValue => {
       iziToast.show({
         backgroundColor: '#ef4040',
-        iconUrl: './img/err.svg',
+        iconUrl: '/img/err.svg',
         title: 'Error',
         message: `Rejected promise in ${delayValue}ms`,
       });
