@@ -3,6 +3,8 @@ import 'flatpickr/dist/flatpickr.min.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
+import errorIcon from '/img/err.svg';
+
 iziToast.settings({
   timeout: 10000,
   resetOnHover: true,
@@ -36,7 +38,7 @@ const options = {
     if (selectedDates[0] <= now) {
       iziToast.show({
         backgroundColor: '#ef4040',
-        iconUrl: '/img/err.svg',
+        iconUrl: errorIcon,
         title: 'Error',
         message: 'Please choose a date in the future',
       });
