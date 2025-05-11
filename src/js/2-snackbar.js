@@ -1,6 +1,9 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
+import errorIcon from '/img/err.svg';
+import okIcon from '/img/ok.svg';
+
 iziToast.settings({
   timeout: 10000,
   resetOnHover: true,
@@ -23,7 +26,7 @@ form.addEventListener('submit', event => {
   if (delayValue < 0) {
     iziToast.show({
       backgroundColor: '#ef4040',
-      iconUrl: '/img/err.svg',
+      iconUrl: errorIcon,
       title: 'Error',
       message: 'Invalid value',
     });
@@ -44,7 +47,7 @@ form.addEventListener('submit', event => {
     .then(delayValue => {
       iziToast.show({
         backgroundColor: '#59a10d',
-        iconUrl: '/img/ok.svg',
+        iconUrl: okIcon,
         title: 'Ok',
         message: `Fulfilled promise in ${delayValue}ms`,
       });
@@ -52,7 +55,7 @@ form.addEventListener('submit', event => {
     .catch(delayValue => {
       iziToast.show({
         backgroundColor: '#ef4040',
-        iconUrl: '/img/err.svg',
+        iconUrl: errorIcon,
         title: 'Error',
         message: `Rejected promise in ${delayValue}ms`,
       });
